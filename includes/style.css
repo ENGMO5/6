@@ -1,0 +1,241 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0b1020,#141d38,#0d1326);
+    color:#fff;
+    min-height:100vh;
+    padding:25px;
+    text-align:center;
+}
+
+/* ==========================
+   Titles
+========================== */
+
+h1{
+    font-size:38px;
+    font-weight:700;
+    margin-bottom:8px;
+    color:#fff;
+    text-shadow:0 0 20px rgba(0,174,255,.6);
+}
+
+h3{
+    font-size:16px;
+    color:#9ca3af;
+    font-weight:400;
+    margin-bottom:20px;
+}
+
+hr{
+    border:none;
+    height:1px;
+    background:linear-gradient(to right,transparent,#3b82f6,transparent);
+    margin:25px auto;
+    width:95%;
+}
+
+/* ==========================
+   Layout
+========================== */
+
+.main-layout{
+    display:flex;
+    gap:25px;
+    justify-content:center;
+    align-items:flex-start;
+    flex-wrap:wrap;
+}
+
+/* ==========================
+   Image Box
+========================== */
+
+.media-box{
+    width:320px;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:15px;
+    box-shadow:0 10px 35px rgba(0,0,0,.45);
+}
+
+.media-box img{
+    width:100%;
+    border-radius:15px;
+    transition:.4s;
+    box-shadow:0 0 30px rgba(0,140,255,.35);
+}
+
+.media-box img:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 45px rgba(0,170,255,.7);
+}
+
+/* ==========================
+   Console
+========================== */
+
+#console{
+    flex:1;
+    min-width:500px;
+    height:350px;
+    background:#05070c;
+    border:1px solid #2563eb;
+    border-radius:18px;
+    padding:18px;
+    color:#00ff88;
+    font-size:15px;
+    overflow-y:auto;
+    text-align:left;
+    font-family:Consolas,monospace;
+    box-shadow:0 0 35px rgba(37,99,235,.35);
+}
+
+#console::-webkit-scrollbar{
+    width:10px;
+}
+
+#console::-webkit-scrollbar-track{
+    background:#111827;
+}
+
+#console::-webkit-scrollbar-thumb{
+    background:#2563eb;
+    border-radius:20px;
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+.btn-container{
+    margin:30px 0;
+}
+
+button{
+    padding:15px 45px;
+    border:none;
+    border-radius:14px;
+    font-size:18px;
+    font-weight:600;
+    color:#fff;
+    cursor:pointer;
+    transition:.35s;
+
+    background:linear-gradient(135deg,#2563eb,#00b4ff);
+
+    box-shadow:
+        0 8px 20px rgba(0,132,255,.45),
+        inset 0 1px 1px rgba(255,255,255,.2);
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:
+        0 12px 28px rgba(0,174,255,.75);
+}
+
+button:active{
+    transform:scale(.96);
+}
+
+button:disabled{
+    background:#374151;
+    box-shadow:none;
+    cursor:not-allowed;
+}
+
+/* ==========================
+   Kernel Options
+========================== */
+
+#kernel-options{
+    margin:20px 0;
+}
+
+input[type="radio"]{
+
+    appearance:none;
+
+    width:18px;
+    height:18px;
+
+    border-radius:50%;
+
+    border:2px solid #4b5563;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    background:#111827;
+}
+
+input[type="radio"]:checked{
+
+    background:#00d4ff;
+
+    border-color:#00d4ff;
+
+    box-shadow:0 0 15px #00d4ff;
+}
+
+label{
+    margin:0 12px;
+    font-size:15px;
+    color:#d1d5db;
+}
+
+/* ==========================
+   Utility
+========================== */
+
+.mt-2{
+    margin-top:2rem;
+}
+
+/* ==========================
+   Glass Card Effect
+========================== */
+
+.card{
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(10px);
+    border-radius:18px;
+    padding:20px;
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:0 10px 35px rgba(0,0,0,.35);
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media(max-width:900px){
+
+    .main-layout{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .media-box{
+        width:100%;
+        max-width:420px;
+    }
+
+    #console{
+        min-width:100%;
+        width:100%;
+    }
+
+}
